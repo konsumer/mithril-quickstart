@@ -1,0 +1,29 @@
+/**
+ * LESS entry-point
+ */
+
+@import "./bootstrap.less";
+@import "./animate.less";
+
+body {
+  margin-top: 50px;
+}
+
+
+// simpler menu
+@media (max-width: 768px) {
+  .navbar-collapse.down {
+    .sr-only;
+  }
+
+  .navbar-collapse.up {
+    li{
+      .animated;
+      .bounceInRight;
+    }
+  }
+
+  .navbar-toggle {
+    color: @component-active-color;
+  }
+}

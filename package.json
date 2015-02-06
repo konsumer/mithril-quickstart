@@ -1,0 +1,43 @@
+{
+  "name": "mithril-quickstart",
+  "version": "1.0.0",
+  "description": "Project template for mithril, with JWT auth, themed bootstrap & easy animations",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konsumer/mithril-quickstart.git"
+  },
+  "keywords": [
+    "mithril",
+    "bootstrap",
+    "bootswatch",
+    "mongodb",
+    "authentication",
+    "jwt"
+  ],
+  "author": "David Konsumer <konsumer@jetboystudio.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konsumer/mithril-quickstart/issues"
+  },
+  "homepage": "https://github.com/konsumer/mithril-quickstart",
+  "dependencies": {
+    "animate.less": "git://github.com/konsumer/animate.less",
+    "body-parser": "^1.11.0",
+    "bootstrap": "^3.3.2",
+    "bootswatch": "^3.3.2",
+    "browserify-middleware": "^4.1.0",
+    "dotenv": "^0.5.1",
+    "express": "^4.11.2",
+    "jwt-async": "^1.0.1",
+    "less-middleware": "^1.0.4",
+    "mithril": "^0.1.30",
+    "mongoose": "^3.8.22",
+    "mongoose-bcrypt": "^1.0.1",
+    "mongoose-type-email": "^1.0.0",
+    "mongoose-type-relation": "^1.0.0"
+  }
+}
