@@ -7,7 +7,6 @@ var path = require('path'),
   envFile = path.join(__dirname, '..', '.env'),
   lessMiddleware = require('less-middleware'),
   mongoose = require('mongoose'),
-  auth = require('./auth.js'),
   browserify = require('browserify-middleware');
 
 // load up .env file
@@ -15,7 +14,18 @@ if (fs.existsSync(envFile)){
   dotenv.load();
 }
 
-mongoose.connect(process.env.MONGO_URI || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || process.env.MONGOSOUP_URL);
+var mongo_url = process.env.MONGO_URI || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || process.env.MONGOSOUP_URL;
+if (!mongo_url){
+  var mockgoose = require('mockgoose');
+  mockgoose(mongoose);
+  mockgoose.reset();
+  mongo_url = 'mongodb://localhost/quickstart';
+}
+
+mongoose.connect(mongo_url);
+
+// use models after potential mockgoose
+var auth = require('./auth.js');
 
 // serve up CSS from LESS. this is efficiently cached.
 app.use(lessMiddleware(pubDir, {

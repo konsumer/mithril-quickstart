@@ -8,9 +8,11 @@
 -  Comment widgets/animations you don't need from bootstrap and [animation.less](https://github.com/machito/animate.less)
 -  Easily themable using [bootswatch](http://bootswatch.com/)
 -  Slick & efficient JWT+bcrypt+mongodb authentication
+-  In-memory dev mongodb, so you can develop without configuring anything
 
 ## setup
 
+-  [download](https://github.com/konsumer/mithril-quickstart/archive/master.zip)
 -  `npm install`
 -  `npm start`
 

@@ -39,5 +39,8 @@
     "mongoose-bcrypt": "^1.0.1",
     "mongoose-type-email": "^1.0.0",
     "mongoose-type-relation": "^1.0.0"
+  },
+  "devDependencies": {
+    "mockgoose": "^1.10.7"
   }
 }
