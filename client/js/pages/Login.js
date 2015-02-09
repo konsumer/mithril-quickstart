@@ -12,7 +12,7 @@ var Login = module.exports = {
       e.preventDefault();
       Auth.login(e.target.email.value, e.target.password.value)
         .then(function(){
-          m.route(Auth.originalRoute || '/');
+          m.route(Auth.originalRoute || '/', null, true);
         }, function(err){
           ctrl.error(m(".alert.alert-danger.animated.fadeInUp", err.message));
         });
